@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+    <script src="calc.js"></script>
+</head>
+<body>
+    <div id="main">
+        <diV id="display_screen"></diV>
+        <div id="keypad">
+            <div id="key">
+                <input type="button" id="one" value="9" onclick="press_me(this.value)">
+                <input type="button" id="two" value="8" onclick="press_me(this.value)">
+                <input type="button" id="three" value="7" onclick="press_me(this.value)">
+                <input type="button" id="four" value="6" onclick="press_me(this.value)">
+                <input type="button" id="five" value="5" onclick="press_me(this.value)">
+                <input type="button" id="six" value="4" onclick="press_me(this.value)">
+                <input type="button" id="seven" value="3" onclick="press_me(this.value)"> 
+                <input type="button" id="eight" value="2" onclick="press_me(this.value)">
+                <input type="button" id="nine" value="1" onclick="press_me(this.value)">
+                <input type="button" id="zero" value="0" onclick="press_me(this.value)">
+                <input type="button" id="clear" value="C" onclick="press_me(this.value)">
+                <input type="button" id="equal" value="=" onclick="press_me(this.value)">
+
+            </div>
+            <div id="opt">
+                <input type="button" id="plus" value="+" onclick="press_me(this.value)">
+                <input type="button" id="minus" value="-" onclick="press_me(this.value)">
+                <input type="button" id="multi" value="*" onclick="press_me(this.value)">
+                <input type="button" id="divide" value="/" onclick="press_me(this.value)">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
