@@ -47,9 +47,6 @@
     color:  #ff006f;
     z-index: 25;
 }
-.carousel-control-prev,.carousel-control-next{
-    top: 500px;
-}
 .big{
     font-size: 30px;
     color:  #ff3982;
