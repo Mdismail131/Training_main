@@ -1,4 +1,5 @@
-arr = []; chk = [];
+arr = []; 
+chk = [];
 function display() {
     var html="";
     for (var i = 0 ; i < arr.length ; i++ ) {
@@ -16,9 +17,13 @@ function display_chk() {
     console.log(chk);
 }
 function myfunction() {
-    arr.push(document.getElementById("task_name").value);
-    document.getElementById("task_name").value = "";
-    display();    
+    if (document.getElementById("task_name").value == "") {
+        alert("Please Insert Task Name");
+    } else {
+        arr.push(document.getElementById("task_name").value);
+        document.getElementById("task_name").value = "";
+        display();
+    }    
 }
 function myfunction_delete(id) {
     for (var i = 0 ; i < arr.length ; i++ ) {
@@ -76,7 +81,7 @@ function mychk_delete(id) {
     display_chk();
 }
 function mychk_update(id) {
-    for (var i = 0 ; i < arr.length ; i++ ) {
+    for (var i = 0 ; i < chk.length ; i++ ) {
         if (id == i){
             chk[i]  = document.getElementById('input_chk'+id+'').value;
             document.getElementsByClassName('edit_chk')[i].style.display = 'inline-block';
