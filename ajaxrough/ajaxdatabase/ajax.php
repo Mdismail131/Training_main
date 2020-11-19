@@ -4,7 +4,7 @@ global $products;
 
 $productid = $_POST['p_id'];
 
-function fetchproduct($productid){
+function fetchproduct($productid) {
     global $products;
     foreach ($products as $product) {
         if ($product['name'] == $productid) {

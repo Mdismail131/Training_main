@@ -1,0 +1,31 @@
+.navbar-dark .navbar-nav .nav-link{
+    color: #140f2d;
+}
+.navbar-nav .nav-item .btn{ 
+    border-radius: 25px;
+    padding: 5px 20px;
+    background-color: #140f2d;
+    color: white;
+}
+.form{
+    background-color: teal;
+}
+.form_row{
+    margin-left: 50px;
+}
+.form_image{
+    color: white;
+    background-image: linear-gradient(to bottom, rgba(2, 2, 2, 0.58) 0%,rgba(6, 5, 5, -1) 100%),url(image/cover1.jpg);
+    background-size: cover;
+}
+#icon .fa{
+    background-color: black;
+    color: white;
+}
+#oslo .fa{
+    border: none;
+}
+#quick_links a{
+    color: inherit;
+    text-decoration: none;
+} 

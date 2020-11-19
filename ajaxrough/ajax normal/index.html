@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Ajax Tutorial</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <table class="table table-bordered" id="table" style="display: none;">
+        <thead class="table-dark">
+            <tr>
+                <th class="text-center">Name</th>
+                <th class="text-center">Class</th>
+                <th class="text-center">Roll No.</th>
+                <th class="text-center">Marks</th>
+            </tr>
+        </thead>
+        <tbody id="studentdata">
+        </tbody>
+    </table>
+    <button class="ml-5" id="btn">Click Here For Student Detail</button>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $('#table').css("display", "");
+                $.ajax({
+                    method: 'POST',
+                    url: 'ajax.php',
+                    dataType: 'json',
+                    success: function(response) {
+                        console.log(response);
+                        $.each( response, function( key, value ) {
+                            $('#studentdata').append('<tr>');
+                            $.each( value, function( key1, value1 ) {
+                                $('#studentdata').append('<td class="text-center">'+value1+'</td>');
+                            });
+                        });               
+                    }
+                });
+                $('#btn').prop('disabled', true);
+            });
+        });
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
